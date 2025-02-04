@@ -1,0 +1,87 @@
+/* Full-width image */
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.banner-image {
+    width: 100%;   /* Make the image stretch to the full width of the viewport */
+    height: auto;  /* Maintain aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    object-fit: cover; /* Optionally ensures the image covers the area without distortion */
+}
+
+/* Optional: Add some spacing or styling to the description */
+.Description {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    font-size: large;
+}
+
+.crud_side {
+    position: fixed;
+    background-color: rgb(143, 140, 140);
+    top: 0;
+    left: 0;
+    width: 100px;
+    bottom: 0;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left: 10px;
+
+}
+
+.contletd {
+    margin-left: 110px;
+    padding-left: 10px;
+    margin-top: 20px;
+    width: 1000px;
+    height: 500px;
+    border-color: #000000;
+    border-radius: 3px;
+    border-style: dotted;
+    position: fixed;
+    opacity: 0;
+}
+
+.conttht {
+    margin-left: 110px;
+    padding-left: 10px;
+    margin-top: 20px;
+    width: 1000px;
+    height: 500px;
+    border-color: #000000;
+    border-radius: 3px;
+    border-style: dotted;
+    position: fixed;
+    opacity: 0;
+}
+
+.contenhance {
+    margin-left: 110px;
+    padding-left: 10px;
+    margin-top: 20px;
+    width: 1000px;
+    height: 500px;
+    border-color: #000000;
+    border-radius: 3px;
+    border-style: dotted;
+    position: fixed;
+    opacity: 1;
+}
+
+button {
+
+    justify-content: center;
+    height:50px; 
+    width:90px;
+    border-radius: 15px;
+}
+
