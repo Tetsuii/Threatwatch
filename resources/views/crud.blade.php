@@ -10,10 +10,11 @@
     </head>
 
     <body>
-        <div class="crud_side"><button class="letd" onclick="">LETD</button><button class="enhance">ENHANCE</button><button class="tht">THT</button>
+        <div class="crud_side"><button class="letd" onclick="changeLETD()">LETD</button><button class="enhance" onclick="changeENHANCE()">ENHANCE</button><button class="tht" onclick="changeTHT()">THT</button>
         </div>
-        <div class="contletd">
+        <div class="contletd" id="contletd">
             <div>
+                <h1>LETD</h1>
                 <h3>Creating new service</h3>
                 <form action="/crud/createletd" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -52,8 +53,9 @@
             </div>
         </div>
 
-        <div class="conttht">
+        <div class="conttht" id="conttht">
             <div>
+                <h1>THT</h1>
                 <h3>Creating new service</h3>
                 <form action="/crud/createtht" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -92,8 +94,9 @@
             </div>
         </div>
 
-        <div class="contenhance">
+        <div class="contenhance" id="contenhance">
             <div>
+                <h1>ENHANCE</h1>
                 <h3>Creating new service</h3>
                 <form action="/crud/createenhance" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -131,5 +134,25 @@
                 </form>
             </div>
         </div>
+        <script>
+            const letd = document.getElementById('contletd');
+            const tht = document.getElementById('conttht');
+            const enhance = document.getElementById('contenhance');
+            function changeLETD() {
+                letd.style.opacity = '1';
+                tht.style.opacity = '0';
+                enhance.style.opacity = '0';
+            }
+            function changeTHT() {
+                letd.style.opacity = '0';
+                tht.style.opacity = '1';
+                enhance.style.opacity = '0';
+            }
+            function changeENHANCE() {
+                letd.style.opacity = '0';
+                tht.style.opacity = '0';
+                enhance.style.opacity = '1';
+            }
+        </script>
     </body>
 </html>
