@@ -26,9 +26,9 @@
                         </div>
                     </div>
                     <div style="border-width:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
-                        <div class="right-image">
+                        <div class="right-image" style="height: 100%; width: 100%; overflow:hidden;">
                             <img src="{{ $ITEMS['service_image'] }}" alt=""
-                                style="height: 350px; object-fit: cover;">
+                                style="height: 250px; object-fit:scale-down;">
                         </div>
                     </div>    
                 </div>

@@ -43,12 +43,12 @@ Route::get('/THT', function () {
 })->name('THT');
 
 Route::get('/crud', [CrudController::class, 'showForm']);
-Route::post('crud/createletd', [CrudController::class, 'createletd']);
-Route::post('crud/updateletd', [CrudController::class, 'updateletd']);
-Route::post('crud/deleteletd', [CrudController::class, 'deleteletd']);
-Route::post('crud/createtht', [CrudController::class, 'createtht']);
-Route::post('crud/updatetht', [CrudController::class, 'updatetht']);
-Route::post('crud/deletetht', [CrudController::class, 'deletetht']);
-Route::post('crud/createenhance', [CrudController::class, 'createenhance']);
-Route::post('crud/updateenhance', [CrudController::class, 'updateenhance']);
-Route::post('crud/deleteenhance', [CrudController::class, 'deleteenhance']);
+Route::post('crud/createletd', [CrudController::class, 'createletd'])->name('crud.createletd');
+Route::post('crud/updateletd/{id}', [CrudController::class, 'updateletd'])->name('crud.updateletd');
+Route::delete('crud/deleteletd/{id}', [CrudController::class, 'deleteletd'])->name('crud.deleteletd');
+Route::post('crud/createtht', [CrudController::class, 'createtht'])->name('crud.createtht');
+Route::post('crud/updatetht/{id}', [CrudController::class, 'updatetht'])->name('crud.updatetht');
+Route::delete('crud/deletetht/{id}', [CrudController::class, 'deletetht'])->name('crud.deletetht');
+Route::post('crud/createenhance', [CrudController::class, 'createenhance'])->name('crud.createenhance');
+Route::post('crud/updateenhance/{id}', [CrudController::class, 'updateenhance'])->name('crud.updateenhance');
+Route::delete('crud/deleteenhance/{id}', [CrudController::class, 'deleteenhance'])->name('crud.deleteenhance');
